@@ -1,0 +1,99 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url('mood-vibes-wallpaper-summer.jpg');
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 90vh;
+  min-width:90vw ;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px)
+  ;
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgb(29, 106, 145);
+  outline: none;
+  background-color: rgba(14, 74, 158, 0.75);
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(196, 203, 93, 0.9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(168, 168, 52, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: rgb(163, 181, 65);
+  font-size: 2.5rem;
+}
+.nav{
+ justify-content: center; 
+ text-align: center;
+ margin-top:none;
+}
+.nav a {
+  text-decoration: none;
+  color: rgb(186, 73, 73);
+}
+@media only screen and (max-width: 400px){
+  *{
+    margin: none;
+    padding: none;
+  }
+  .calculator-grid {
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 80px)
+  }
+.nav{
+ justify-content: center; 
+ text-align: center;
+ margin-top:5px;
+}
+.nav a {
+  text-decoration: none;
+  color: rgb(229, 87, 96);
+  font-family: 'Oi', cursive;
+  font-size: 15px;
+}
+.cc{
+  font-family: 'Oi', cursive;
+  font-size: 15px;
+}
+#Sr {
+ color: #c05f6f;
+}
+}
